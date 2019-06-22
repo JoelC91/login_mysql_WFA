@@ -172,6 +172,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(220, 220);
+            this.MinimumSize = new System.Drawing.Size(220, 220);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
