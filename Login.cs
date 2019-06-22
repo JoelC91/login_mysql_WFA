@@ -33,11 +33,11 @@ namespace connect_mysql
             try
             {
                 conexion.Open();
-                MessageBox.Show("Conexion Exitosa");
+                MessageBox.Show("Conexion Exitosa" , "Sistema administrativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Sistema administrativo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw;
             }
         }
@@ -55,7 +55,7 @@ namespace connect_mysql
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Sistema administrativo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw;
             }
         }
