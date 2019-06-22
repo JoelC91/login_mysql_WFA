@@ -44,6 +44,11 @@ namespace connect_mysql
             try
             {
                 conexion.Open();
+                txt_host.Enabled = false;
+                txt_db.Enabled = false;
+                txt_user.Enabled = false;
+                txt_pass.Enabled = false;
+                btn_conn.Enabled = false;
                 MessageBox.Show("Conexion Exitosa" , "Sistema administrativo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -61,6 +66,15 @@ namespace connect_mysql
                 {
                     conexion.Close();
                     conexion.Dispose();
+                    txt_host.Text = "";
+                    txt_db.Text = "";
+                    txt_user.Text = "";
+                    txt_pass.Text = "";
+                    txt_host.Enabled = true;
+                    txt_db.Enabled = true;
+                    txt_user.Enabled = true;
+                    txt_pass.Enabled = true;
+                    btn_conn.Enabled = true;
                     MessageBox.Show("Descconeccion Exitosa");
                 }
             }
