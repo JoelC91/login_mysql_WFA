@@ -42,6 +42,7 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.tm_time = new System.Windows.Forms.Timer(this.components);
             this.lbl_time = new System.Windows.Forms.Label();
+            this.tt_help = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -154,6 +155,11 @@
             this.lbl_time.TabIndex = 11;
             this.lbl_time.Text = "HH:MM:SS";
             // 
+            // tt_help
+            // 
+            this.tt_help.AutomaticDelay = 100;
+            this.tt_help.IsBalloon = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +182,7 @@
             this.MinimumSize = new System.Drawing.Size(220, 220);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +203,6 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Timer tm_time;
         private System.Windows.Forms.Label lbl_time;
+        private System.Windows.Forms.ToolTip tt_help;
     }
 }

@@ -20,6 +20,10 @@ namespace connect_mysql
             InitializeComponent();
             lbl_time.Text = DateTime.Now.ToLongTimeString();
             this.CenterToScreen();
+            this.tt_help.SetToolTip(this.txt_host,"Ingrese el host");
+            this.tt_help.SetToolTip(this.txt_db, "Ingrese la base de datos");
+            this.tt_help.SetToolTip(this.txt_user, "Ingrese el usuario");
+            this.tt_help.SetToolTip(this.txt_pass, "Ingrese el password");
         }
 
         private void Btn_exit_Click(object sender, EventArgs e)
@@ -70,6 +74,11 @@ namespace connect_mysql
         private void Timer1_Tick(object sender, EventArgs e)
         {
             lbl_time.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
