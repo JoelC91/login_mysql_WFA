@@ -18,6 +18,7 @@ namespace connect_mysql
         public Login()
         {
             InitializeComponent();
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
             this.CenterToScreen();
         }
 
@@ -57,6 +58,11 @@ namespace connect_mysql
                 MessageBox.Show(ex.Message);
                 //throw;
             }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

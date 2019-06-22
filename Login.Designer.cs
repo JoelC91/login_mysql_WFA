@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@
             this.btn_conn = new System.Windows.Forms.Button();
             this.btn_disc = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.tm_time = new System.Windows.Forms.Timer(this.components);
+            this.lbl_time = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -136,11 +139,27 @@
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.Btn_exit_Click);
             // 
+            // tm_time
+            // 
+            this.tm_time.Enabled = true;
+            this.tm_time.Interval = 1000;
+            this.tm_time.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // lbl_time
+            // 
+            this.lbl_time.AutoSize = true;
+            this.lbl_time.Location = new System.Drawing.Point(24, 156);
+            this.lbl_time.Name = "lbl_time";
+            this.lbl_time.Size = new System.Drawing.Size(61, 13);
+            this.lbl_time.TabIndex = 11;
+            this.lbl_time.Text = "HH:MM:SS";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 181);
+            this.Controls.Add(this.lbl_time);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_disc);
             this.Controls.Add(this.btn_conn);
@@ -172,5 +191,7 @@
         private System.Windows.Forms.Button btn_conn;
         private System.Windows.Forms.Button btn_disc;
         private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Timer tm_time;
+        private System.Windows.Forms.Label lbl_time;
     }
 }
