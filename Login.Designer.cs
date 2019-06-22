@@ -148,7 +148,7 @@
             // lbl_time
             // 
             this.lbl_time.AutoSize = true;
-            this.lbl_time.Location = new System.Drawing.Point(24, 156);
+            this.lbl_time.Location = new System.Drawing.Point(28, 151);
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(61, 13);
             this.lbl_time.TabIndex = 11;
@@ -171,6 +171,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

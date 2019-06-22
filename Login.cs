@@ -24,7 +24,14 @@ namespace connect_mysql
 
         private void Btn_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult option;
+            if (conexion.State == System.Data.ConnectionState.Open)
+            {
+                MessageBox.Show("Debe desconectarse", "Sistema administrativo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            option = MessageBox.Show("Desea salir de la aplicación", "Sistema administrativo", MessageBoxButtons.YesNo , MessageBoxIcon.Question);
+            if (option == DialogResult.Yes) { this.Close(); }
         }
 
         private void Btn_conn_Click(object sender, EventArgs e)
